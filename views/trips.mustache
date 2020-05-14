@@ -1,0 +1,28 @@
+<html>
+    <head>Welcome</head>
+
+    <body>
+    <form method='POST' action='/trips'>
+        <input type='text' placeHolder='Destination' name='destination'/>
+        <input type='text' placeHolder='Image' name='image'/>
+        <input type='text' placeHolder='Arrival' name='arrival'/>
+        <input type='text' placeHolder='Departure' name='departure'/>
+        <button>Add New Trip</button>
+    </form>
+    
+{{#listOfTask}}
+    <form method='POST' action='/tripsDelete'>
+        
+           
+        {{destination}} {{image}} {{arrival}} {{departure}}
+        <input type='hidden' name='delete' value='{{destination}}'/>
+        <button>Delete Trip</button>
+            
+    </form>
+{{/listOfTask}}
+
+    </body>
+
+
+
+</html>
